@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 import jakarta.validation.Valid;
 
+/*
 @Slf4j
 @RequestMapping("/api/v1")
 @RestController
@@ -26,6 +27,7 @@ public class UserRestController {
         return map;
     }    
 }
+*/
 
 @Slf4j
 @RequestMapping("/api/todos")

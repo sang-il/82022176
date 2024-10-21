@@ -9,8 +9,23 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-
+import java.util.HashMap;
+import java.util.Map;
 import jakarta.validation.Valid;
+
+@Slf4j
+@RequestMapping("/api/v1")
+@RestController
+public class UserRestController {    
+
+    @GetMapping("/v1/user/")
+    public Map<String, String> getUser() {
+    // 사번(UserId)를 리턴하는 간단한 API
+    HashMap<String, String> map = new HashMap<String, String>();
+        map.put("UserId", "82022176"); // 예시 사번 리턴
+        return map;
+    }    
+}
 
 @Slf4j
 @RequestMapping("/api/todos")

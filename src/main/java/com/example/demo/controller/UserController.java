@@ -20,7 +20,7 @@ public class UserController {
     @GetMapping("/user")
     public ResponseEntity<Map<String, String>> getUser() {
         Map<String, String> response = new HashMap<>();
-        response.put("employeeId", "12345");
+        response.put("EMPID", "82022176");
         return ResponseEntity.ok(response);
     }
 }

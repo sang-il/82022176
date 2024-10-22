@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: "82022176-ingress"
+  namespace: "82022176"  # 네임스페이스를 명시
+spec:
+  ingressClassName: ingress-internal
+  rules:
+  - host: "82022176.ce-aa.kubepia.net"
+    http:
+      paths:
+      - path: /
+        backend:
+          service:
+            name: my-82022176
+            port:
+              number: 8080
+        pathType: Prefix

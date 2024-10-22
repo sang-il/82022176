@@ -1,0 +1,20 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "82022176"
+  namespace: "82022176"  # 네임스페이스를 명시
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "82022176"
+  template:
+    metadata:
+      labels:
+        app: "82022176"
+    spec:
+      containers:
+        - name: "82022176" 
+          image: cepgbaseacr.azurecr.io/82022176
+          ports:
+          - containerPort: 8080

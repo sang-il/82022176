@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ce-aa-pvc
+  namespace: "82022176"  # 네임스페이스를 명시
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: ce-aa-rwmany
+  resources:
+    requests:
+      storage: 1Gi

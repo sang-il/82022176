@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: "82022176-ingress"
+  namespace: "82022176"  # 네임스페이스를 명시
 spec:
   ingressClassName: ingress-internal
   rules:

@@ -2,7 +2,7 @@ configMapGenerator:
 - files:
   - application.yml
   name: 82022176-configmap
-  namespace: "82022176"  # 네임스페이스를 명시
+  namespace: "82022176"
 resources:
 - ../../base
 - pvc.yaml
@@ -13,5 +13,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namePrefix: prod-
 images:
+- name: ceappacr.azurecr.io/82022176
+  newTag: "202410220610"
 - name: cepgbaseacr.azurecr.io/82022176
   newTag: "202408090453"

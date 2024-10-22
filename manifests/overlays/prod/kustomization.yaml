@@ -2,6 +2,7 @@ configMapGenerator:
 - files:
   - application.yml
   name: 82022176-configmap
+  namespace: "82022176"  # 네임스페이스를 명시
 resources:
 - ../../base
 - pvc.yaml
